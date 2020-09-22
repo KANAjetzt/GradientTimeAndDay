@@ -27,9 +27,12 @@ const getHexByPercent = (per) => {
 };
 
 const handleSwitchBtnClick = () => {
-  console.log("clicked");
   btnSwitchIsClicked = !btnSwitchIsClicked;
-  console.log(btnSwitchIsClicked);
+  if (btnSwitchIsClicked) {
+    btnDOM.textContent = "Switch to numeric";
+  } else {
+    btnDOM.textContent = "Switch to percent";
+  }
 };
 
 setInterval(() => {
